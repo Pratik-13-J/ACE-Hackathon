@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Optimization System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+        form input, form select, form button, form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tax Optimization System</h1>
+    </header>
+    <div class="container">
+        <h2>Tax Optimization Form</h2>
+        <form action="/submit-tax-data" method="POST">
+            
+            <!-- Section: Income Tax -->
+            <section>
+                <h3>Income Tax</h3>
+                <label for="income">Annual Income (₹)</label>
+                <input type="number" id="income" name="income" placeholder="Enter your annual income" required>
+                <label for="tax-paid">Income Tax Paid (₹)</label>
+                <input type="number" id="tax-paid" name="tax-paid" placeholder="Enter total income tax paid">
+            </section>
+            
+            <!-- Section: STCG -->
+            <section>
+                <h3>Short-Term Capital Gains (STCG)</h3>
+                <label for="stcg-income">Income from STCG (₹)</label>
+                <input type="number" id="stcg-income" name="stcg-income" placeholder="Enter income from STCG">
+                <label for="stcg-tax">Tax Paid on STCG (₹)</label>
+                <input type="number" id="stcg-tax" name="stcg-tax" placeholder="Enter tax paid on STCG">
+            </section>
+            
+            <!-- Section: LTCG -->
+            <section>
+                <h3>Long-Term Capital Gains (LTCG)</h3>
+                <label for="ltcg-income">Income from LTCG (₹)</label>
+                <input type="number" id="ltcg-income" name="ltcg-income" placeholder="Enter income from LTCG">
+                <label for="ltcg-tax">Tax Paid on LTCG (₹)</label>
+                <input type="number" id="ltcg-tax" name="ltcg-tax" placeholder="Enter tax paid on LTCG">
+            </section>
+            
+            <!-- Section: Deductions -->
+            <section>
+                <h3>Deductions</h3>
+                <label for="section80c">Investments under Section 80C (₹)</label>
+                <input type="number" id="section80c" name="section80c" placeholder="e.g., PPF, EPF, ELSS" required>
+                <label for="section80d">Health Insurance Premium (Section 80D) (₹)</label>
+                <input type="number" id="section80d" name="section80d" placeholder="e.g., Family health insurance" required>
+                <label for="home-loan">Home Loan Interest (₹)</label>
+                <input type="number" id="home-loan" name="home-loan" placeholder="Enter home loan interest paid">
+            </section>
+            
+            <!-- Section: Tax Saving & Optimization -->
+            <section>
+                <h3>Tax Saving & Optimization</h3>
+                <label for="suggestions">Tax Saving Suggestions</label>
+                <textarea id="suggestions" name="suggestions" rows="4" placeholder="Enter suggestions for tax savings"></textarea>
+            </section>
+            
+            <!-- Submit Button -->
+            <button type="submit">Optimize My Taxes</button>
+        </form>
+    </div>
+    <footer>
+        © 2025 Tax Optimization System. All rights reserved.
+    </footer>
+</body>
+</html>
